@@ -1,0 +1,9 @@
+{
+  "suggest.noselect": true,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "languageserver": {
+  },
+  "python.jediEnabled": false,
+  "python.formatting.provider": "black",
+  "solargraph.formatting": true
+}

@@ -1,0 +1,63 @@
+# Copy from
+# https://github.com/github/gitignore
+
+# MacOSX
+.DS_Store
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# Ignore tags created by etags and ctags
+TAGS
+!TAGS/
+tags
+!tags/
+
+# eclipse
+*.pydevproject
+.project
+.metadata
+#bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+# External tool builders
+.externalToolBuilders/
+# Locally stored "Eclipse launch configurations"
+*.launch
+# CDT-specific
+.cproject
+# PDT-specific
+.buildpath
+
+###
+
+# Hokuro-ge hack
+,/**/*
+
+# vscode
+.vscode
+.history
+
+# venv
+.venv
+
+# hokuroge
+,
