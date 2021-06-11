@@ -125,7 +125,8 @@ alias vimconf="cd ~/.config/vim && nvim ."
 alias nvimconf="cd ~/.config/nvim && nvim ."
 alias vim="nvim"
 
-#tmux自動起動
+# tmux
+# tmux自動起動
 count=`ps aux | grep tmux | grep -v grep | wc -l`
 if test $count -eq 0; then
     echo `tmux`
