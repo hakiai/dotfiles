@@ -208,7 +208,7 @@ function custom_prompt {
   dir_color="${back_color}${c_dark_cyan}${text_color}${c_white}"
   arrow_color="${text_color}${c_light_green}"
 
-  # プロジェクトるーとからのPATHを取得
+  # プロジェクトルートからのPATHを取得
   chpwd () {
     git_root=$PWD
     while [[ $git_root != / && ! -e $git_root/.git ]]; do
