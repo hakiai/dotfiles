@@ -311,6 +311,7 @@ hook_add = '''
     nnoremap <silent><buffer><expr> <C-g> defx#do_action('print')
     nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
     nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')
+    nnoremap <C-n> n
   endfunction
 
   autocmd StdinReadPre * let s:std_in=1
