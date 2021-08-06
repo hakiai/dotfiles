@@ -1117,11 +1117,11 @@
 			<key>Name</key>
 			<string>MONO</string>
 			<key>Non Ascii Font</key>
-			<string>FuraCodeNerdFontComplete-Medium 12</string>
+			<string>Menlo-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FuraCodeNerdFontComplete-Medium 12</string>
+			<string>FuraMonoNerdFontCompleteM-Medium 11</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -1151,7 +1151,7 @@
 				<key>Green Component</key>
 				<real>1</real>
 				<key>Red Component</key>
-				<real>0.2900848388671875</real>
+				<real>0.28627450980392155</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>

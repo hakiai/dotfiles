@@ -1,0 +1,9 @@
+[user]
+	name = Tomonori Hakiai
+	email = tomonori.hakai@garage-ventures.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	lg = log --pretty=format:'%C(red reverse)%d%Creset%C(white reverse) %h% Creset %C(cyan reverse bold) %an %Creset %C(cyan bold)%ar%Creset%n%C(white bold)%w(80)%s%Creset%n%w(80,2,2)%b' --graph
