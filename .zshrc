@@ -146,6 +146,9 @@ fvim() {
 # ag
 alias ag="ag --pager 'less -R'"
 
+# direnv
+eval "$(direnv hook zsh)"
+
 #============================================================
 
 
@@ -189,6 +192,10 @@ function custom_prompt {
     elif [[ -n `echo "$st" | grep "^Untracked files"` ]]; then
       # git 管理されていないファイルがある状態
       branch_status="${separator}${back_color}${c_black}${text_color}${c_red} ${branch} [?] ${branch_name} ${back_color}${c_red}${text_color}${c_black}${sharp}${reset}${text_color}${c_red}${sharp}${reset}"
+
+    elif [[ -n `echo "$st" | grep "^Unmerged paths"` ]]; then
+      # コンフリクト状態
+      branch_status="${separator_confrict}${back_color}${c_danger}${text_color}${c_danger_t} ${branch} [!!] ${branch_name} ${reset}${back_color}${c_danger_t}${text_color}${c_danger}${sharp}${reset}${text_color}${c_danger_t}${sharp}${reset}"
 
     elif [[ -n `echo "$st" | grep "^Changes not staged for commit"` ]]; then
       # git add されていないファイルがある状態

@@ -1,40 +1,43 @@
 "===== Dein読み込み =====
-if &compatible
-  set nocompatible
-endif
-
-let s:dein_dir = expand('~/.cache/dein')
-
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-
-" dein.vimが存在していない場合はgithubからclone
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+if !exists('g:vscode')
+  if &compatible
+    set nocompatible
   endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+
+  let s:dein_dir = expand('~/.cache/dein')
+
+  let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+
+  " dein.vimが存在していない場合はgithubからclone
+  if &runtimepath !~# '/dein.vim'
+    if !isdirectory(s:dein_repo_dir)
+      execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+    endif
+    execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+  endif
+
+  if dein#load_state(s:dein_dir)
+    call dein#begin(s:dein_dir)
+
+    let s:toml_dir = expand('~/.config/nvim')
+
+    call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
+
+    call dein#load_toml(s:toml_dir. '/dein_lazy.toml', {'lazy': 1})
+
+    call dein#end()
+    call dein#save_state()
+  endif
+
+  call map(dein#check_clean(), "delete(v:val, 'rf')")
+
+  " If you want to install not installed plugins on startup.
+  if dein#check_install()
+    call dein#install()
+  endif
+else
+  runtime vim-plug.vim
 endif
-
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
-
-  let s:toml_dir = expand('~/.config/nvim')
-
-  call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
-
-  call dein#load_toml(s:toml_dir. '/dein_lazy.toml', {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-call map(dein#check_clean(), "delete(v:val, 'rf')")
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-
 
 "===== 表示設定 =====
 set number "番号の表示
@@ -111,21 +114,23 @@ noremap <C-j> 10j
 noremap <C-k> 10k
 noremap <C-h> ^
 noremap <C-l> $
-nnoremap <silent>ss :split<Return><C-w>w
-nnoremap <silent>sv :vsplit<Return><C-w>w
-noremap sh <C-w>h
-noremap sk <C-w>k
-noremap sj <C-w>j
-noremap sl <C-w>l
-noremap sH <C-w>H
-noremap sK <C-w>K
-noremap sJ <C-w>J
-noremap sL <C-w>L
-nnoremap <silent>st :tabnew<Return>
-nnoremap <silent>th :tabprev<Return>
-nnoremap <silent>tl :tabnext<Return>
-nnoremap <silent>sp :bprev<CR>
-nnoremap <silent>sn :bnext<CR>
+if !exists('g:vscode')
+  nnoremap <silent>ss :split<Return><C-w>w
+  nnoremap <silent>sv :vsplit<Return><C-w>w
+  noremap sh <C-w>h
+  noremap sk <C-w>k
+  noremap sj <C-w>j
+  noremap sl <C-w>l
+  noremap sH <C-w>H
+  noremap sK <C-w>K
+  noremap sJ <C-w>J
+  noremap sL <C-w>L
+  nnoremap <silent>st :tabnew<Return>
+  nnoremap <silent>th :tabprev<Return>
+  nnoremap <silent>tl :tabnext<Return>
+  nnoremap <silent>sp :bprev<CR>
+  nnoremap <silent>sn :bnext<CR>
+endif
 " nnoremap ; :
 " nnoremap : ;
 nnoremap n nzz

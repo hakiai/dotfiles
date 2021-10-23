@@ -12,6 +12,11 @@ hook_add = '''
 
 # ======================
 
+# ===== JSON =====
+repo = 'leshill/vim-json'
+on_ft = ['json']
+# ================
+
 # ===== Flutter =====
 [[plugins]]
 repo = 'reisub0/hot-reload.vim'
