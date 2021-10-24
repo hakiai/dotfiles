@@ -108,9 +108,13 @@ set mouse=a
 "===== キー入力 =====
 "共通
 let mapleader = "\<Space>"
-noremap j gj
-noremap k gk
-
+if !exists('g:vscode')
+  noremap j gj
+  noremap k gk
+else
+  nnoremap k <Cmd>call VSCodeNotify('cursorMove', { 'to': 'up', 'by': 'wrappedLine', 'value': v:count ? v:count : 1 })<CR>
+  nnoremap j <Cmd>call VSCodeNotify('cursorMove', { 'to': 'down', 'by': 'wrappedLine', 'value': v:count ? v:count : 1 })<CR>
+endif
 
 "ノーマルモード
 noremap <CR> A<CR><ESC>
