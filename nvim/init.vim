@@ -37,6 +37,10 @@ if !exists('g:vscode')
   endif
 else
   runtime vim-plug.vim
+  xmap gc  <Plug>VSCodeCommentary
+  nmap gc  <Plug>VSCodeCommentary
+  omap gc  <Plug>VSCodeCommentary
+  nmap gcc <Plug>VSCodeCommentaryLine
 endif
 
 "===== 表示設定 =====
