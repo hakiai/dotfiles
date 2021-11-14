@@ -72,7 +72,7 @@ repo = 'ryanoasis/vim-devicons'
 
 
 [[plugins]] # fzf.vimの依存関係
-repo = '/usr/local/opt/fzf'
+repo = 'junegunn/fzf'
 
 
 [[plugins]] # 曖昧検索
