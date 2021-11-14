@@ -99,7 +99,7 @@ eval "$(rbenv init -)"
 export PATH=$HOME/.pyenv/bin:$PATH
 eval "$(pyenv init -)"
 export PATH=$HOME/.pyenv/shims:$PATH
-eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # pipenv
 # export PIPENV_VENV_IN_PROJECT=true
