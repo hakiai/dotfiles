@@ -237,7 +237,7 @@ function custom_prompt {
   }
   chpwd
 
-  echo "${dir_color} ${Prompt_short_dir} ${branch_status}${sharp} $UNAME${reset}\n${arrow_color}${arrow}${reset}"
+  echo "${dir_color} ${Prompt_short_dir} ${branch_status}${sharp} ${text_color}${c_danger_t}$UNAME${reset}\n${arrow_color}${arrow}${reset}"
 
 }
 
