@@ -179,35 +179,42 @@ function custom_prompt {
   separator_none=${back_color}${c_white}${text_color}${c_dark_cyan}${sharp}${reset}
   separator_confrict=${back_color}${c_danger}${text_color}${c_dark_cyan}${sharp}${reset}
 
+  ARCH=`uname -m`
+  if [[ $ARCH == 'arm64' ]]; then
+      UNAME=""
+  else
+      UNAME=$ARCH
+  fi
+
   branch_name=`git symbolic-ref --short HEAD 2> /dev/null`
   if [ -z $branch_name ]; then
     # git 管理されていないディレクトリは何も返さない
-    branch_status="${separator_none}${text_color}${c_white}${sharp}${reset}"
+    branch_status="${separator_none}${text_color}${c_white}"
   else
     st=`git status 2> /dev/null`
     if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
       # 全て commit されてクリーンな状態
-      branch_status="${separator}${back_color}${c_black}${text_color}${c_cyan} ${branch} ${branch_name} ${back_color}${c_cyan}${text_color}${c_black}${sharp}${reset}${text_color}${c_cyan}${sharp}${reset}"
+      branch_status="${separator}${back_color}${c_black}${text_color}${c_cyan} ${branch} ${branch_name} ${back_color}${c_cyan}${text_color}${c_black}${sharp}${reset}${text_color}${c_cyan}"
 
     elif [[ -n `echo "$st" | grep "^Untracked files"` ]]; then
       # git 管理されていないファイルがある状態
-      branch_status="${separator}${back_color}${c_black}${text_color}${c_red} ${branch} [?] ${branch_name} ${back_color}${c_red}${text_color}${c_black}${sharp}${reset}${text_color}${c_red}${sharp}${reset}"
+      branch_status="${separator}${back_color}${c_black}${text_color}${c_red} ${branch} [?] ${branch_name} ${back_color}${c_red}${text_color}${c_black}${sharp}${reset}${text_color}${c_red}"
 
     elif [[ -n `echo "$st" | grep "^Unmerged paths"` ]]; then
       # コンフリクト状態
-      branch_status="${separator_confrict}${back_color}${c_danger}${text_color}${c_danger_t} ${branch} [!!] ${branch_name} ${reset}${back_color}${c_danger_t}${text_color}${c_danger}${sharp}${reset}${text_color}${c_danger_t}${sharp}${reset}"
+      branch_status="${separator_confrict}${back_color}${c_danger}${text_color}${c_danger_t} ${branch} [!!] ${branch_name} ${reset}${back_color}${c_danger_t}${text_color}${c_danger}${sharp}${reset}${text_color}${c_danger_t}"
 
     elif [[ -n `echo "$st" | grep "^Changes not staged for commit"` ]]; then
       # git add されていないファイルがある状態
-      branch_status="${separator}${back_color}${c_black}${text_color}${c_red} ${branch} [+] ${branch_name} ${back_color}${c_red}${text_color}${c_black}${sharp}${reset}${text_color}${c_red}${sharp}${reset}"
+      branch_status="${separator}${back_color}${c_black}${text_color}${c_red} ${branch} [+] ${branch_name} ${back_color}${c_red}${text_color}${c_black}${sharp}${reset}${text_color}${c_red}"
 
     elif [[ -n `echo "$st" | grep "^Changes to be committed"` ]]; then
       # git commit されていないファイルがある状態
-      branch_status="${separator}${back_color}${c_black}${text_color}${c_gold} ${branch} [!] ${branch_name} ${back_color}${c_gold}${text_color}${c_black}${sharp}${reset}${text_color}${c_gold}${sharp}${reset}"
+      branch_status="${separator}${back_color}${c_black}${text_color}${c_gold} ${branch} [!] ${branch_name} ${back_color}${c_gold}${text_color}${c_black}${sharp}${reset}${text_color}${c_gold}"
 
     else
       # 上記以外の状態の場合
-      branch_status="${separator_confrict}${back_color}${c_danger}${text_color}${c_danger_t} ${branch} [!!] ${branch_name} ${reset}${back_color}${c_danger_t}${text_color}${c_danger}${sharp}${reset}${text_color}${c_danger_t}${sharp}${reset}"
+      branch_status="${separator_confrict}${back_color}${c_danger}${text_color}${c_danger_t} ${branch} [!!] ${branch_name} ${reset}${back_color}${c_danger_t}${text_color}${c_danger}${sharp}${reset}${text_color}${c_danger_t}"
 
     fi
   fi
@@ -230,7 +237,7 @@ function custom_prompt {
   }
   chpwd
 
-  echo "${dir_color} ${Prompt_short_dir} ${branch_status}\n${arrow_color}${arrow}${reset}"
+  echo "${dir_color} ${Prompt_short_dir} ${branch_status}${sharp}${reset}\n${arrow_color}${arrow}${reset}"
 
 }
 
