@@ -56,8 +56,5 @@ local.properties
 .vscode
 .history
 
-# venv
-.venv
-
 # hokuroge
 ,

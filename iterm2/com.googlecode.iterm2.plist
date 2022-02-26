@@ -1200,7 +1200,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.11615839149746193</real>
+			<real>0.04634456171022789</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -1924,6 +1924,8 @@
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>disableMetalWhenUnplugged</key>
+	<false/>
 	<key>findMode_iTerm</key>
 	<integer>4</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>
@@ -1932,5 +1934,7 @@
 	<false/>
 	<key>kCPKUseSystemColorPicker</key>
 	<false/>
+	<key>preferIntegratedGPU</key>
+	<true/>
 </dict>
 </plist>

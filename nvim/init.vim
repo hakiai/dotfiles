@@ -69,6 +69,7 @@ highlight MatchParen ctermbg=93
 highlight CursorColumn ctermbg=91
 highlight DiffAdd cterm=bold ctermbg=23
 highlight CursorLine cterm=None ctermbg=0
+highlight CocFadeOut ctermbg=160
 
 "===== 文字、カーソル設定 =====
 set fenc=utf-8 "文字コードを指定

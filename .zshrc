@@ -85,6 +85,7 @@ chpwd() {
 
 # alias
 alias ls="ls -GF"
+alias ibrew="arch -x86_64 /usr/local/bin/brew"
 
 # ===========================================================
 
@@ -97,8 +98,9 @@ eval "$(rbenv init -)"
 
 # pyenv
 export PATH=$HOME/.pyenv/bin:$PATH
-eval "$(pyenv init -)"
+export PATH="/usr/local/bin:$PATH"
 export PATH=$HOME/.pyenv/shims:$PATH
+eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # pipenv
@@ -110,6 +112,9 @@ eval "$(nodenv init -)"
 
 # Flutter
 export PATH="$PATH:$HOME/development/flutter/bin"
+
+# Homebrew
+export PATH=/opt/homebrew/bin:$PATH
 
 # Original Commands
 export PATH="$HOME/dotfiles/bin:$PATH"
