@@ -111,7 +111,7 @@ export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
 # Flutter
-export PATH="$PATH:$HOME/development/flutter/bin"
+export PATH="$PATH:$HOME/Development/flutter/bin"
 
 # Homebrew
 export PATH=/opt/homebrew/bin:$PATH

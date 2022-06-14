@@ -12,13 +12,17 @@ hook_add = '''
 
 # ======================
 
-# ===== JSON =====
-repo = 'leshill/vim-json'
-on_ft = ['json']
-# ================
-
 # ===== Flutter =====
 [[plugins]]
 repo = 'reisub0/hot-reload.vim'
 on_ft = ['dart']
+# ====================
+
+# ===== C# =====
+[[plugins]]
+repo = 'OmniSharp/omnisharp-vim'
+on_ft = ['cs']
+hook_add = '''
+  let g:omnicomplete_fetch_full_documentation = 1
+'''
 # ====================

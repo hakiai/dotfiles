@@ -122,6 +122,7 @@ noremap <CR> A<CR><ESC>
 noremap <C-j> 10j
 noremap <C-k> 10k
 noremap <C-h> ^
+noremap <Backspace> ^
 noremap <C-l> $
 if !exists('g:vscode')
   nnoremap <silent>ss :split<Return><C-w>w
@@ -269,3 +270,7 @@ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 " python path
 let g:python_host_prog = expand('~/.pyenv/versions/neovim-2/bin/python')
 let g:python3_host_prog = expand('~/.pyenv/versions/neovim-3/bin/python')
+
+" よく使うけど忘れるコマンド
+" :call dein#update()   プラグインアップデート
+"
