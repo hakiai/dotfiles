@@ -3,7 +3,6 @@ if !exists('g:vscode')
   if &compatible
     set nocompatible
   endif
-
   let s:dein_dir = expand('~/.cache/dein')
 
   let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
@@ -59,10 +58,8 @@ syntax enable
 syntax sync minlines=100
 colorscheme pablo
 " 色味表: XtermColorTable
-highlight Pmenu ctermbg=17
-highlight Pmenu ctermfg=14
 highlight Search ctermfg=17
-highlight PmenuSel ctermbg=45
+highlight PmenuSel ctermbg=17
 highlight PmenuSel ctermfg=17
 highlight Special ctermfg=87
 highlight MatchParen ctermbg=93
@@ -150,15 +147,16 @@ nnoremap <silent><Leader>n :noh<CR>
 nnoremap <C-f> l
 "python3実行
 nnoremap <silent><Leader><Leader>p :!python3 %<CR>
+set shell=/bin/zsh
 
 "インサートモード
-inoremap <C-n> <Down>
-inoremap <C-p> <Up>
+" inoremap <C-n> <Down>
+" inoremap <C-p> <Up>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Delete>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
+" inoremap <C-j> <Down>
+" inoremap <C-k> <Up>
 
 " ヴィジュアルモード
 vnoremap <C-j> 10j
@@ -273,4 +271,4 @@ let g:python3_host_prog = expand('~/.pyenv/versions/neovim-3/bin/python')
 
 " よく使うけど忘れるコマンド
 " :call dein#update()   プラグインアップデート
-"
+" :call dein#recache_runtimepath()  キャッシュ削除

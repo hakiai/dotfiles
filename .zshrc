@@ -24,6 +24,7 @@ zinit light zsh-users/zsh-autosuggestions
 
 export PATH=$PATH:/usr/bin:/user/sbin
 export PATH=$PATH:$HOME/bin:$HOME/opt/bin
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 export LANG=ja_JP.UTF-8
 export LC_ALL=en_US.UTF-8
 export HISTSIZE=100000
@@ -86,6 +87,8 @@ chpwd() {
 # alias
 alias ls="ls -GF"
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
+alias co="checkout"
+alias ci="commit"
 
 # ===========================================================
 
@@ -112,6 +115,13 @@ eval "$(nodenv init -)"
 
 # Flutter
 export PATH="$PATH:$HOME/Development/flutter/bin"
+
+# jEnv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+# GCP
+source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 
 # Homebrew
 export PATH=/opt/homebrew/bin:$PATH
