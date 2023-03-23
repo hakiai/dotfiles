@@ -9,5 +9,7 @@
   "solargraph.formatting": true,
   "html.autoCreateQuotes": false,
   "prettier.singleQuote": true,
-  "vetur.ignoreProjectWarning": true
+  "vetur.ignoreProjectWarning": true,
+  "pyright.inlayHints.functionReturnTypes": false,
+  "pyright.inlayHints.variableTypes"	: false
 }
