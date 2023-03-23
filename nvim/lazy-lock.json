@@ -1,5 +1,7 @@
 {
+  "fzf-lua": { "branch": "main", "commit": "51372dc4b1b6dbae2d057e0735bdba61aa86d51d" },
   "lazy.nvim": { "branch": "main", "commit": "887eb75591520a01548134c4623617b639289d0b" },
-  "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
-  "telescope.nvim": { "branch": "master", "commit": "942fe5faef47b21241e970551eba407bc10d9547" }
+  "nvim-web-devicons": { "branch": "master", "commit": "95b1e300699be8eb6b5be1758a9d4d69fe93cc7f" },
+  "vfiler-column-devicons": { "branch": "main", "commit": "d8eab1e46cdb4bd8ef2fee61dc9655aa6545289f" },
+  "vfiler.vim": { "branch": "main", "commit": "e486b2963af612ad98e19e0f6eab9e6c1c73678e" }
 }

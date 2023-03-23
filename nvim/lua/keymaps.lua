@@ -10,7 +10,7 @@ vim.keymap.set({'n', 'v'}, '<C-l>', '$')
 vim.keymap.set('n', '<C-f>', 'l')
 
 -- 検索
-vim.keymap.set('n', '<silent><Leader>n', ':noh<CR>')
+vim.keymap.set('n', '<Leader>n', ':noh<CR>')
 
 -- 文字入力
 vim.keymap.set('n', 'x', '"_x')
@@ -25,7 +25,11 @@ vim.keymap.set('n', '<Leader>h', '<C-w>h')
 vim.keymap.set('n', '<Leader>j', '<C-w>j')
 vim.keymap.set('n', '<Leader>k', '<C-w>k')
 vim.keymap.set('n', '<Leader>l', '<C-w>l')
-vim.keymap.set('n', '<Leader>l', '<C-w>l')
+vim.keymap.set('n', '<Leader>t', ':tabnew<CR>')
+vim.keymap.set('n', '<Leader><Leader>h', ':tabprev<CR>')
+vim.keymap.set('n', '<Leader><Leader>l', ':tabnext<CR>')
+vim.keymap.set('n', '<Leader><Leader>p', ':bprev<CR>')
+vim.keymap.set('n', '<Leader><Leader>n', ':bnext<CR>')
 
 -- インサートモード
 vim.keymap.set('i', '<C-b>', '<Left>')
