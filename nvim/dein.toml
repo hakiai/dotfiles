@@ -143,7 +143,6 @@ hook_add = '''
 repo = 'itchyny/lightline.vim'
 hook_add = '''
   let g:lightline = {
-    \ 'colorscheme': 'PaperColor_light',
     \ 'active': {
     \   'left': [['mode', 'paste'],
     \            ['gitbranch', 'readonly', 'filename', 'modified']]

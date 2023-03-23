@@ -56,7 +56,7 @@ set re=0 "シンタックスハイライトするときの正規表現エンジ�
 set ttyfast
 syntax enable
 syntax sync minlines=100
-colorscheme pablo
+colorscheme default
 " 色味表: XtermColorTable
 highlight Search ctermfg=17
 highlight PmenuSel ctermbg=17
@@ -67,6 +67,9 @@ highlight CursorColumn ctermbg=91
 highlight DiffAdd cterm=bold ctermbg=23
 highlight CursorLine cterm=None ctermbg=0
 highlight CocFadeOut ctermbg=160
+highlight Constant ctermfg=51
+highlight Comment ctermfg=31
+highlight PreProc ctermfg=46
 
 "===== 文字、カーソル設定 =====
 set fenc=utf-8 "文字コードを指定

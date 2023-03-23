@@ -77,6 +77,9 @@ autoload -U colors
 colors
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 
+# lsでディレクトリの色をわかりやすく
+export LSCOLORS=cxfxcxdxbxegedabagacad
+
 # cd後自動でls
 chpwd() {
   if [[ $(pwd) != $HOME ]]; then;
