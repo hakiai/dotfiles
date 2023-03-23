@@ -59,8 +59,7 @@ syntax sync minlines=100
 colorscheme default
 " 色味表: XtermColorTable
 highlight Search ctermfg=17
-highlight PmenuSel ctermbg=17
-highlight PmenuSel ctermfg=17
+highlight PmenuSel ctermbg=123 ctermfg=16
 highlight Special ctermfg=87
 highlight MatchParen ctermbg=93
 highlight CursorColumn ctermbg=91
@@ -70,6 +69,7 @@ highlight CocFadeOut ctermbg=160
 highlight Constant ctermfg=51
 highlight Comment ctermfg=31
 highlight PreProc ctermfg=46
+highlight Visual ctermbg=23
 
 "===== 文字、カーソル設定 =====
 set fenc=utf-8 "文字コードを指定
@@ -83,7 +83,7 @@ set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮ "不可視文字の指�
 set whichwrap=b,s,h,l,<,>,[,],~ "行頭、行末で行のカーソル移動を可能にする
 set backspace=indent,eol,start "バックスペースでの行移動を可能にする
 set nocursorline "カーソル行を強調表示しない
-autocmd InsertEnter,InsertLeave * set cursorline! "インサートモード時、行をハイライト
+" autocmd InsertEnter,InsertLeave * set cursorline! "インサートモード時、行をハイライト
 "モードによってカーソルの形を変える
 let &t_SI = "\e]50;CursorShape=1\x7"
 let &t_EI = "\e]50;CursorShape=0\x7"

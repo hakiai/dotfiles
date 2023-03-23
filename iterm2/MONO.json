@@ -71,7 +71,7 @@
   "Ansi 3 Color" : {
     "Red Component" : 1,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.074509803921568626,
+    "Blue Component" : 0.074509803921568654,
     "Alpha Component" : 1,
     "Green Component" : 0.92549019607843142
   },
@@ -93,7 +93,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.83397654588638548
   },
-  "Use Cursor Guide" : false,
+  "Use Cursor Guide" : true,
   "Unlimited Scrollback" : false,
   "Custom Command" : "No",
   "Keyboard Map" : {
@@ -314,7 +314,7 @@
   "Disable Smcup Rmcup" : false,
   "Name" : "MONO",
   "Blinking Cursor" : false,
-  "Guid" : "66E641A8-9506-4BB8-8012-2B63AB549428",
+  "Guid" : "AAD114D5-69FF-44FE-9945-86C13F9B9E97",
   "Ansi 1 Color" : {
     "Red Component" : 1,
     "Color Space" : "sRGB",
@@ -355,7 +355,7 @@
     "Green Component" : 0.27843137254901962
   },
   "Blur" : true,
-  "Normal Font" : "FiraCodeNerdFontCompleteM-Retina 12",
+  "Normal Font" : "FiraCodeNerdFontCompleteM-Retina 10",
   "Vertical Spacing" : 1,
   "Use Underline Color" : false,
   "Disable Printing" : false,
@@ -397,9 +397,9 @@
   "Background Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.20000000000000001,
+    "Blue Component" : 0.138763427734375,
     "Alpha Component" : 1,
-    "Green Component" : 0.16078431372549021
+    "Green Component" : 0.098160896450281143
   },
   "Screen" : -2,
   "Initial Use Transparency" : true,

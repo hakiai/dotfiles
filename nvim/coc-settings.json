@@ -8,5 +8,6 @@
   "python.venvpath": "~/.local/share/virtualenvs",
   "solargraph.formatting": true,
   "html.autoCreateQuotes": false,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "vetur.ignoreProjectWarning": true
 }
