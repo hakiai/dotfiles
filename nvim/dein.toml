@@ -170,7 +170,7 @@ hook_add = '''
 repo = 'alvan/vim-closetag'
 hook_add = '''
   let g:closetag_filenames = '*.html,*.vue,*.erb,*.php,*.twig,*.js,*.ts,*.jsx,*.tsx'
-  let g:closetag_filetypes = 'html,vue,erb,php,twig,js,ts,jsx,tsx'
+  let g:closetag_filetypes = 'html,vue,erb,php,twig,js,ts,jsx,tsx,htmldjango'
 '''
 
 

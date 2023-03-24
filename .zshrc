@@ -140,7 +140,7 @@ export PATH="$HOME/dotfiles/bin:$PATH"
 # vim config
 alias vimconf="cd ~/.config/vim && nvim ."
 # nVim config
-alias nvimconf="cd ~/.config/nvim && nvim ."
+alias nvimconf="cd ~/dotfiles/nvim && nvim ."
 alias vim="nvim"
 
 # tmux
