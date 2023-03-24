@@ -25,4 +25,4 @@ vim.opt.hlsearch = true -- 検索した文字を強調
 vim.opt.incsearch = true -- インクリメンタルサーチを有効にする
 
 vim.opt.undofile = true -- 閉じてもundoできるように
-vim.opt.undodir = vim.fn.stdpath('config') .. '/undo'
+vim.opt.undodir = vim.fn.stdpath('config') .. '/lua/.undo'
