@@ -370,25 +370,6 @@ map g# <Plug>(asterisk-gz#)
 '''
 
 
-# [[plugins]]
-# repo = "petertriho/nvim-scrollbar"
-# hook_add = '''
-# lua require("scrollbar").setup()
-# '''
-
-
-# [[plugins]]
-# repo = 'nathanaelkane/vim-indent-guides' # インデントの深さによって色分
-# hook_add = '''
-#   let g:indent_guides_enable_on_vim_startup = 1
-#   let g:indent_guides_guide_size = 1
-#   let g:indent_guides_auto_colors = 0
-#   let g:indent_guides_start_level = 2
-#   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=23
-#   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=25
-# '''
-
-
 [[plugins]] # LSP
 repo = "neoclide/coc.nvim"
 merge = 0
