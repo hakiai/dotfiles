@@ -370,6 +370,10 @@ map g# <Plug>(asterisk-gz#)
 '''
 
 
+[[plugins]] # copilot
+repo = "github/copilot.vim"
+
+
 [[plugins]] # LSP
 repo = "neoclide/coc.nvim"
 merge = 0

@@ -1,4 +1,11 @@
 {
+  "Ansi 5 Color" : {
+    "Red Component" : 0.916107177734375,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.8294263548878007,
+    "Alpha Component" : 1,
+    "Green Component" : 0.27057144977152348
+  },
   "Working Directory" : "\/Users\/hakiaitomonori",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
@@ -355,7 +362,7 @@
     "Green Component" : 0.27843137254901962
   },
   "Blur" : true,
-  "Normal Font" : "FiraCodeNerdFontCompleteM-Retina 10",
+  "Normal Font" : "FiraMonoNerdFontComplete-Regular 11",
   "Vertical Spacing" : 1,
   "Use Underline Color" : false,
   "Disable Printing" : false,
@@ -386,6 +393,7 @@
     "Blue Component" : 0.94478845596313477
   },
   "Open Toolbelt" : false,
+  "Unicode Version" : 9,
   "Ansi 6 Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
@@ -394,16 +402,17 @@
     "Green Component" : 0.58823529411764708
   },
   "Transparency" : 0.11615839149746193,
+  "Blink Allowed" : true,
   "Background Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.138763427734375,
+    "Blue Component" : 0.11871337890625,
     "Alpha Component" : 1,
-    "Green Component" : 0.098160896450281143
+    "Green Component" : 0.096813281201283352
   },
   "Screen" : -2,
   "Initial Use Transparency" : true,
-  "Non Ascii Font" : "FiraCodeNerdFontCompleteM-Retina 12",
+  "Non Ascii Font" : "FiraMonoNerdFontComplete-Regular 11",
   "Mouse Reporting allow mouse wheel" : true,
   "Ansi 13 Color" : {
     "Red Component" : 0.925537109375,
@@ -415,14 +424,9 @@
   "Allow Paste Bracketing" : false,
   "Columns" : 1000,
   "Use Tab Color" : false,
+  "Unicode Normalization" : 0,
   "Visual Bell" : true,
   "Custom Directory" : "No",
-  "ASCII Ligatures" : false,
-  "Ansi 5 Color" : {
-    "Red Component" : 0.916107177734375,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.8294263548878007,
-    "Alpha Component" : 1,
-    "Green Component" : 0.27057144977152348
-  }
+  "Thin Strokes" : 3,
+  "ASCII Ligatures" : false
 }
