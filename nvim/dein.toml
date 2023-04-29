@@ -4,6 +4,7 @@ hook_add = '''
 let g:fern#default_hidden = 1
 let g:fern#disable_default_mappings = 1
 
+
 nnoremap <silent>so :Fern . -reveal=%<CR>
 
 function! s:init_fern() abort
@@ -405,8 +406,10 @@ set signcolumn=yes
 " other plugin before putting this into your config.
 inoremap <silent><expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "<Down>"
 inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "<Down>"
+inoremap <silent><expr> <Down> coc#pum#visible() ? coc#pum#next(1) : "<Down>"
 inoremap <silent><expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "<Up>"
 inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "<Up>"
+inoremap <silent><expr> <Up> coc#pum#visible() ? coc#pum#prev(1) : "<Up>"
 inoremap <silent><expr> <Enter> coc#pum#visible() ? coc#pum#confirm() : "<Enter>"
 inoremap <silent><expr> <Esc> coc#pum#visible() ? coc#pum#cancel() : "<Esc>"
 inoremap <silent><expr> <C-h> coc#pum#visible() ? coc#pum#cancel() : "<C-h>"
