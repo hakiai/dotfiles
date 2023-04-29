@@ -89,6 +89,9 @@ chpwd() {
 
 # alias
 alias ls="ls -GF"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -iv"
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
 alias co="checkout"
 alias ci="commit"
@@ -117,7 +120,9 @@ export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
 # Flutter
-export PATH="$PATH:$HOME/Development/flutter/bin"
+# export PATH="$PATH:$HOME/Development/flutter/bin"
+alias flutter="fvm flutter"
+export PATH="$PATH:$HOME/fvm/default/bin"
 
 # jEnv
 export PATH="$HOME/.jenv/bin:$PATH"

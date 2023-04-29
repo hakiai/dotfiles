@@ -70,6 +70,7 @@ highlight Constant ctermfg=51
 highlight Comment ctermfg=31
 highlight PreProc ctermfg=46
 highlight Visual ctermbg=23
+highlight Todo ctermbg=190
 
 "===== 文字、カーソル設定 =====
 set fenc=utf-8 "文字コードを指定
