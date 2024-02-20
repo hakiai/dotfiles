@@ -42,68 +42,6 @@ require("lazy").setup({
     end
   },
   {
-    'obaland/vfiler.vim', -- ファイラ
-    lazy = false,
-    dependencies = { "obaland/vfiler-column-devicons" },
-    keys = {
-      {"si", ":VFiler -find-file<CR>"},
-    },
-    config = function()
-      local action = require('vfiler/action')
-      require('vfiler/config').setup {
-        options = {
-          columns = 'git,indent,devicons,name',
-          auto_cd = true,
-        },
-        mappings = {
-          ['o'] = action.open_tree,
-          ['l'] = action.open,
-          ['<CR>'] = action.open,
-        },
-      }
-      require('vfiler/config').unmap('<Space>')
-      require('vfiler/config').unmap('L')
-      require('vfiler/config').unmap('s')
-      require('vfiler/config').unmap('t')
-      -- vim.cmd([[
-      --   autocmd VimEnter * if &filetype ==# netrw | echo 'hoge' | endif
-      -- ]])
-      vim.cmd([[
-        autocmd VimEnter * if &filetype ==# '' | execute "VFiler" | endif
-      ]])
-    end
-  },
-  {
-    "hrsh7th/nvim-cmp", -- 補完
-    config = function()
-      local cmp = require("cmp")
-      cmp.setup({
-        snippet = {
-          expand = function(args)
-            vim.fn["vsnip#anonymous"](args.body)
-          end,
-        },
-        sources = {
-          { name = "nvim_lsp" },
-          -- { name = "buffer" },
-          -- { name = "path" },
-        },
-        mapping = cmp.mapping.preset.insert({
-          ["<C-p>"] = cmp.mapping.select_prev_item(),
-          ["<C-n>"] = cmp.mapping.select_next_item(),
-          ["<C-k>"] = cmp.mapping.select_prev_item(),
-          ["<C-j>"] = cmp.mapping.select_next_item(),
-          ['<C-f>'] = cmp.mapping.complete(),
-          ['<C-e>'] = cmp.mapping.abort(),
-          ["<CR>"] = cmp.mapping.confirm { select = true },
-        }),
-        -- experimental = {
-        --   ghost_text = true,
-        -- },
-      })
-    end
-  },
-  {
     "terrortylor/nvim-comment", -- gccでコメントアウトトグル
     config = function()
       require('nvim_comment').setup()
@@ -145,28 +83,10 @@ require("lazy").setup({
     end
   },
   {
-    "akinsho/bufferline.nvim", -- バッファライン
-    version = "v3.*",
+    "Shougo/defx.nvim",
+    dependencies = { 'kristijanhusak/defx-icons' },
     config = function()
-      require("bufferline").setup({
-        options = {
-          mode = "tabs",
-          separator_style = 'thin',
-          show_buffer_close_icons = false,
-          show_close_icon = false,
-          color_icons = true,
-        },
-        highlights = {
-          background = {
-            ctermbg = '14',
-            ctermfg = '14'
-          },
-          tab = {
-            ctermbg = '14',
-            ctermfg = '14'
-          }
-        }
-      })
+      vim.keymap.set('n', 'si', [[:<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>]], {noremap = true, silent = true})
     end
-  },
+  }
 })

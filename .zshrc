@@ -21,10 +21,10 @@ zinit light zsh-users/zsh-autosuggestions
 
 
 # Basin Settings ============================================
-
 export PATH=$PATH:/usr/bin:/user/sbin
 export PATH=$PATH:$HOME/bin:$HOME/opt/bin
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH":~/.bin
 export LANG=ja_JP.UTF-8
 export LC_ALL=en_US.UTF-8
 export HISTSIZE=100000

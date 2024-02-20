@@ -101,7 +101,7 @@ hook_add = '''
   nnoremap <silent>sf :Files<CR>
   nnoremap <silent>sb :Buffers<CR>
   nnoremap <silent>sg :GFiles<CR>
-  nnoremap <silent>sw :BLines<CR>
+  nnoremap <silent>s/ :BLines<CR>
   nnoremap <silent>sr :Ag<CR>
   nnoremap <silent>sa :Rg<CR>
   nnoremap <silent>sk :bd<CR>
@@ -379,6 +379,7 @@ repo = "github/copilot.vim"
 repo = "neoclide/coc.nvim"
 merge = 0
 rev = "release"
+
 
 hook_add = '''
 " .venvがあるディレクトリをルートとする

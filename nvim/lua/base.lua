@@ -26,3 +26,7 @@ vim.opt.incsearch = true -- インクリメンタルサーチを有効にする
 
 vim.opt.undofile = true -- 閉じてもundoできるように
 vim.opt.undodir = vim.fn.stdpath('config') .. '/lua/.undo'
+
+-- Pythonのpath指定
+vim.g.python_host_prog = vim.fn.expand('~/.pyenv/versions/neovim-2/bin/python')
+vim.g.python3_host_prog = vim.fn.expand('~/.pyenv/versions/neovim-3/bin/python')

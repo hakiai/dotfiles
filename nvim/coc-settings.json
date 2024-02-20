@@ -2,6 +2,12 @@
   "suggest.noselect": true,
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
   },
   "python.jediEnabled": false,
   "python.formatting.provider": "black",
@@ -11,5 +17,5 @@
   "prettier.singleQuote": true,
   "vetur.ignoreProjectWarning": true,
   "pyright.inlayHints.functionReturnTypes": false,
-  "pyright.inlayHints.variableTypes"	: false
+  "pyright.inlayHints.variableTypes": false
 }

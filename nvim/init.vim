@@ -71,6 +71,7 @@ highlight Comment ctermfg=31
 highlight PreProc ctermfg=46
 highlight Visual ctermbg=23
 highlight Todo ctermbg=190
+highlight CocInlayHint ctermfg=31
 
 "===== 文字、カーソル設定 =====
 set fenc=utf-8 "文字コードを指定
